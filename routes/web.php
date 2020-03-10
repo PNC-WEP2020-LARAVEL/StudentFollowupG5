@@ -20,3 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('showstudent', 'StudentController@index')->name('showstudent');
+Route::get('showform', 'StudentController@create')->name('showform');
+Route::get('back', 'StudentController@backForm')->name('back');
+Route::post('addstudent', 'StudentController@store')->name('save');
+Route::get('showformedit/{id}', 'StudentController@edit')->name('edit');
+Route::put('editstudent/{id}', 'StudentController@update')->name('editstudent');
